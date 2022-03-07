@@ -1,25 +1,27 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int sum (int a);
 
-int main()
-{
-    int num, result;
+int addDigit(int num) {
 
-    cout<<"\n Enter Numbers : ";
-    cin>>num;
-    result = sum(num);
-    cout<<"\n Sum of Digits : "<<result;
-    return 0;
+   if (num <= 0) {
+  
+      return 0;
+  
+    } 
+ 
+    return ( num % 10) + addDigit( num / 10);
 }
-int sum (int num)
-{
-    if (num != 0)
-    {
-        return (num % 10 + sum (num / 10));
-    }
-    else
-    {
-       return 0;
-    }
+
+int main() {
+ 
+   int n, result;
+ 
+   cout << "Enter a number \n";
+   cin >> n;
+ 
+   result = addDigit(n);
+ 
+   cout << "Sum of digits of a number is " << result;
+ 
+   return 0;
 }
