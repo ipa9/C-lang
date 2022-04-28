@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 #include <string.h>
 using namespace std;
 int main()
@@ -15,6 +14,5 @@ int main()
         str[len-i-1]=temp;
     }
    cout<<str;
-    getch();
     return 0;
 }
